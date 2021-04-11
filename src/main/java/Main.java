@@ -18,12 +18,16 @@ public class Main {
         dao.createUser(user2);
         dao.createUser(user3);
 
-
+        System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+        System.out.println(dao.getUserById(1L));
+        System.out.println(dao.getUserById(2L));
+        System.out.println(dao.getUserById(3L));
+        System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
 
        List<User> userList = dao.getUsersEmail();
         for (User user : userList) {
             System.out.println(user);
         }
+
     }
-    //fghdfgjfgjsfghj
 }
