@@ -16,7 +16,6 @@ public class Product extends Goods{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
     private Long id;
 
     private String name;

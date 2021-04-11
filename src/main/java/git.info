@@ -1,0 +1,130 @@
+
+Microsoft Windows [Version 10.0.19041.867]
+(c) 2020 Microsoft Corporation. All rights reserved.
+C:\Users\domas\GitAtsiuntimai\PracticalProject>git pull
+Already up to date.
+C:\Users\domas\GitAtsiuntimai\PracticalProject>git brach
+git: 'brach' is not a git command. See 'git --help'.
+The most similar command is
+        branch
+C:\Users\domas\GitAtsiuntimai\PracticalProject>git branch
+* master
+
+C:\Users\domas\GitAtsiuntimai\PracticalProject>git pull origin master
+From https://github.com/Kestutisjulius/pp
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+
+C:\Users\domas\GitAtsiuntimai\PracticalProject>git commit
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   src/main/java/Main.java
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        PracticalProject.iml
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\domas\GitAtsiuntimai\PracticalProject>git add .
+
+C:\Users\domas\GitAtsiuntimai\PracticalProject>git commit -m "Test"
+[master be351ec] Test
+ 2 files changed, 39 insertions(+)
+ create mode 100644 PracticalProject.iml
+
+C:\Users\domas\GitAtsiuntimai\PracticalProject>git push
+Logon failed, use ctrl+c to cancel basic credential prompt.
+Username for 'https://github.com': DMLT12
+Password for 'https://DMLT12@github.com':
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/Kestutisjulius/pp.git/'
+
+C:\Users\domas\GitAtsiuntimai\PracticalProject>DMLT12
+'DMLT12' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\domas\GitAtsiuntimai\PracticalProject>git push
+Logon failed, use ctrl+c to cancel basic credential prompt.
+Username for 'https://github.com':
+Password for 'https://github.com':
+remote: No anonymous write access.
+fatal: Authentication failed for 'https://github.com/Kestutisjulius/pp.git/'
+
+C:\Users\domas\GitAtsiuntimai\PracticalProject>git push
+Logon failed, use ctrl+c to cancel basic credential prompt.
+Username for 'https://github.com': DMLT12
+Password for 'https://DMLT12@github.com':
+remote: Permission to Kestutisjulius/pp.git denied to DMLT12.
+fatal: unable to access 'https://github.com/Kestutisjulius/pp.git/': The requested URL returned error: 403
+
+C:\Users\domas\GitAtsiuntimai\PracticalProject>git push
+Logon failed, use ctrl+c to cancel basic credential prompt.
+Username for 'https://github.com': DMLT12
+Password for 'https://DMLT12@github.com':
+remote: Permission to Kestutisjulius/pp.git denied to DMLT12.
+fatal: unable to access 'https://github.com/Kestutisjulius/pp.git/': The requested URL returned error: 403
+
+C:\Users\domas\GitAtsiuntimai\PracticalProject>git push
+Logon failed, use ctrl+c to cancel basic credential prompt.
+Username for 'https://github.com': DMLT12
+Password for 'https://DMLT12@github.com':
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/Kestutisjulius/pp.git/'
+
+C:\Users\domas\GitAtsiuntimai\PracticalProject>git push
+Logon failed, use ctrl+c to cancel basic credential prompt.
+Username for 'https://github.com': DMLT12
+Password for 'https://DMLT12@github.com':
+Enumerating objects: 12, done.
+Counting objects: 100% (12/12), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (7/7), 1.48 KiB | 1.48 MiB/s, done.
+Total 7 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Kestutisjulius/pp.git
+   eff0ffe..be351ec  master -> master
+
+C:\Users\domas\GitAtsiuntimai\PracticalProject>git checkout Domas
+error: pathspec 'Domas' did not match any file(s) known to git
+
+C:\Users\domas\GitAtsiuntimai\PracticalProject>git checkout domas
+error: pathspec 'domas' did not match any file(s) known to git
+
+C:\Users\domas\GitAtsiuntimai\PracticalProject>git checkout -b domas
+Switched to a new branch 'domas'
+
+C:\Users\domas\GitAtsiuntimai\PracticalProject>git branch
+* domas
+  master
+
+C:\Users\domas\GitAtsiuntimai\PracticalProject>git push
+fatal: The current branch domas has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin domas
+
+
+C:\Users\domas\GitAtsiuntimai\PracticalProject>git commit -m "New branch"
+On branch domas
+nothing to commit, working tree clean
+
+C:\Users\domas\GitAtsiuntimai\PracticalProject> git push --set-upstream origin domas
+Logon failed, use ctrl+c to cancel basic credential prompt.
+Username for 'https://github.com': DMLT12
+Password for 'https://DMLT12@github.com':
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'domas' on GitHub by visiting:
+remote:      https://github.com/Kestutisjulius/pp/pull/new/domas
+remote:
+To https://github.com/Kestutisjulius/pp.git
+ * [new branch]      domas -> domas
+Branch 'domas' set up to track remote branch 'domas' from 'origin'.
+
+C:\Users\domas\GitAtsiuntimai\PracticalProject>

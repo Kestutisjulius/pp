@@ -2,6 +2,7 @@ package util;
 
 import model.Cart;
 import model.Product;
+import model.Supplier;
 import model.User;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
@@ -29,6 +30,7 @@ public class HibernateUtil {
 
             configuration.setProperties(properties);
             configuration.addAnnotatedClass(User.class);
+            configuration.addAnnotatedClass(Supplier.class);
             configuration.addAnnotatedClass(Product.class);
             configuration.addAnnotatedClass(Cart.class);
 

@@ -20,7 +20,7 @@ public class Main {
 
 
 
-        List<User> userList = dao.getUsersEmail();
+       List<User> userList = dao.getUsersEmail();
         for (User user : userList) {
             System.out.println(user);
         }
