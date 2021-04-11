@@ -29,7 +29,7 @@ public class Product extends Goods{
     @JoinColumn(name = "cart_id", nullable = false)
     private Cart cart;
 
-    @ManyToMany
+    @ManyToOne
     @JoinColumn(name = "supplier_id", nullable = false)
     private Supplier supplier;
 

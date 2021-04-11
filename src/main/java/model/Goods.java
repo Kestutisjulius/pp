@@ -5,8 +5,4 @@ public abstract class Goods {
     private double price;
 
     protected abstract double getDiscount(double discount);
-
-
-
-
 }

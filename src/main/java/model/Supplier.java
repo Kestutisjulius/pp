@@ -1,33 +1,26 @@
 package model;
 
-public enum Supplier {
-    MAXIMA(10, "first"),
-    IKI(7, "third"),
-    NORFA(8, "second"),
-    RIMI(6, "fourth"),
-    AIBE(5,"no priority");
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-    private int commissionInPercent;
-    private String priority;
+import javax.persistence.*;
+import java.util.List;
 
-    Supplier(int commissionInPercent, String priority) {
-        this.commissionInPercent = commissionInPercent;
-        this.priority = priority;
-    }
+@Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class Supplier {
 
-    public int getCommissionInPercent() {
-        return commissionInPercent;
-    }
+    @Id
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
+    private Long id;
 
-    public String getPriority() {
-        return priority;
-    }
+    @Enumerated(EnumType.ORDINAL)
+    private SupplierName name;
 
-    public void setCommissionInPercent(int commissionInPercent) {
-        this.commissionInPercent = commissionInPercent;
-    }
-
-    public void setPriority(String priority) {
-        this.priority = priority;
-    }
+    @OneToMany
+    @JoinColumn(name = "products_id")
+    private List<Product> products;
 }
