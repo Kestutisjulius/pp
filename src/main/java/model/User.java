@@ -8,8 +8,8 @@ import lombok.ToString;
 import javax.persistence.*;
 
 @NamedQueries({
-        @NamedQuery(name = "get_user_by_full_name",
-        query = "from User WHERE fullName like :name"
+        @NamedQuery(name = "get_user_by_fullName",
+        query = "from User WHERE fullName like :fullName"
         ),
         @NamedQuery(name = "get_email_from_user",
         query = "from User WHERE eMail like :eMail")

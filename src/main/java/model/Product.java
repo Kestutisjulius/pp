@@ -1,17 +1,19 @@
 package model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
+
 import java.time.LocalDateTime;
 
+@EqualsAndHashCode(callSuper = true)
 @Entity
 @Table(name = "Product")
-@Data
+@Data @ToString
 @AllArgsConstructor
 @NoArgsConstructor
+
+
 public class Product extends Goods{
 
     @Id
@@ -22,17 +24,14 @@ public class Product extends Goods{
     private Double price;
     private Integer quantity;
     private Integer discount;
-    private LocalDateTime recordModifiedTime;
 
     @ManyToOne
-    @JoinColumn(name = "cart_id", nullable = false)
+    @JoinColumn(name = "cart_id")
     private Cart cart;
 
     @ManyToOne
     @JoinColumn(name = "supplier_id", nullable = false)
     private Supplier supplier;
-
-
 
 
 

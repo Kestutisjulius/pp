@@ -1,4 +1,6 @@
-import dao.Dao;
+import dao.ProductDao;
+import dao.UserDao;
+import model.Product;
 import model.User;
 
 import java.util.List;
@@ -8,26 +10,32 @@ public class Main {
     public static void main(String[] args) {
 
 
-        Dao dao = new Dao();
+        UserDao userDao = new UserDao();
+        ProductDao productDao = new ProductDao();
+        userDao.build3FirstUsers();
+        productDao.build6FirstProducts();
+
+        System.out.println("get user by ID --> " + userDao.getUserById(1L));
+       //-------------------------------------------------------------------------
+        List<User>users = userDao.getUserByFullName("Jonas");
+        for (User user : users) {
+            System.out.println("get user by full NAME --> " + user.getFullName());
+        }
+        //--------------------------------------------------------------------------
+
+        List<User>usersEmail = userDao.getUsersEmail("as@");
+        for (User user : usersEmail) {
+            System.out.println("get user email --> " + user.getEMail());
+        }
+        //----------------------------------------------------------------------------
+        User updatedUser = new User(2L, "Aida Asmenskaite", "aida@pastas.lt", true);
+        userDao.updateUser(updatedUser);
         User user1 = new User(null, "Petras Petraitis", "petras@pastas.lt", false);
         User user2 = new User(null, "Jonas Jonaitis", "jonas@pastas.lt", false);
-        User user3 = new User(null, "Vardenis Pavardenis", "vardenis@pastas.lt", true);
+        userDao.createUser(user2);
+        userDao.deleteUser(user1);
 
-        System.out.println("new USER to DB...");
-        dao.createUser(user1);
-        dao.createUser(user2);
-        dao.createUser(user3);
 
-        System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
-        System.out.println(dao.getUserById(1L));
-        System.out.println(dao.getUserById(2L));
-        System.out.println(dao.getUserById(3L));
-        System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
-
-       List<User> userList = dao.getUsersEmail();
-        for (User user : userList) {
-            System.out.println(user);
-        }
 
     }
 }
