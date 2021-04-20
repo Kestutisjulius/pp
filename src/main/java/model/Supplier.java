@@ -18,8 +18,8 @@ public class Supplier {
     @Column(name = "supplier_id")
     private Long id;
 
-    @Enumerated(EnumType.ORDINAL)
-    private SupplierName name;
+    //@Enumerated(EnumType.ORDINAL)
+    private String name;
 
     @OneToMany(mappedBy = "id")
     private Set<Product> products;

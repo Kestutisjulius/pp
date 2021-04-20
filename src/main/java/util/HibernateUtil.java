@@ -8,14 +8,15 @@ import org.hibernate.cfg.Environment;
 import org.hibernate.service.ServiceRegistry;
 
 import java.util.Properties;
+import java.util.logging.Level;
 
 public class HibernateUtil {
     private static SessionFactory sessionFactory;
 
     public static SessionFactory getSessionFactory(){
         if (sessionFactory == null) {
+            java.util.logging.Logger.getLogger("org.hibernate").setLevel(Level.OFF);
             Configuration configuration = new Configuration();
-
             Properties properties = new Properties();
             properties.put(Environment.DRIVER, "com.mysql.cj.jdbc.Driver");
             properties.put(Environment.URL, "jdbc:mysql://localhost:3306/superUser?serverTimezone=UTC");

@@ -6,7 +6,9 @@ import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 import util.HibernateUtil;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class UserDao {
     public void createUser(User user) {
@@ -56,13 +58,18 @@ public class UserDao {
         transaction.commit();
     }
     public void build3FirstUsers(){
-        User user1 = new User(null, "Petras Petraitis", "petras@pastas.lt", false);
-        User user2 = new User(null, "Jonas Jonaitis", "jonas@pastas.lt", false);
-        User user3 = new User(null, "Vardenis Pavardenis", "vardenis@pastas.lt", true);
+        //Cart cart = CartDao.createTestCart();
+        Set<Cart> user1Carts = new HashSet<>();
+        CartDao cartDao = new CartDao();
+        user1Carts.add(cartDao.getCartById(1L));
+        User user1 = new User(null, "Petras Petraitis", "petras@pastas.lt", false,null);
+        User user2 = new User(null, "Jonas Jonaitis", "jonas@pastas.lt", false,null);
+        User user3 = new User(null, "Vardenis Pavardenis", "vardenis@pastas.lt", true,null);
         System.out.println("new USER to DB...");
         createUser(user1);
         createUser(user2);
         createUser(user3);
+
     }
 
 

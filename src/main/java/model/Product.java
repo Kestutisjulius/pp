@@ -22,7 +22,7 @@ public class Product extends Goods{
 
     private String name;
     private Double price;
-    private Integer quantity;
+    //private Integer quantity;
     private Integer discount;
 
    //@ManyToOne

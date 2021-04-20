@@ -20,8 +20,11 @@ public class Main {
         userDao.build3FirstUsers();
         supplierDao.buildSuppliers();
         productDao.build6FirstProducts();
+        CartDao.createTestCart(3L);
+        CartDao.createTestCart(4L);
+        CartDao.createTestCart(5L);
 
-        System.out.println("get user by ID --> " + userDao.getUserById(1L));
+       /* System.out.println("get user by ID --> " + userDao.getUserById(1L));
        //-------------------------------------------------------------------------
         List<User>users = userDao.getUserByFullName("Jonas");
         for (User user : users) {
@@ -39,7 +42,7 @@ public class Main {
         User user1 = new User(null, "Petras Petraitis", "petras@pastas.lt", false, null);
         User user2 = new User(null, "Jonas Jonaitis", "jonas@pastas.lt", false, null);
         userDao.createUser(user2);
-        userDao.deleteUser(user1);
+        userDao.deleteUser(user1);*/
 
 
 
