@@ -20,6 +20,11 @@ public class Cart {
     @Column(name = "cart_id")
     private Long cartId;
 
-    @OneToMany(mappedBy = "cart", cascade = CascadeType.ALL)
+    @OneToMany
+    @JoinColumn (name = "id")
     private Set<Product> products;
+
+   //@ManyToOne
+   //@JoinColumn (name = "user_id")
+   //private User user;
 }

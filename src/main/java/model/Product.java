@@ -25,13 +25,13 @@ public class Product extends Goods{
     private Integer quantity;
     private Integer discount;
 
-    @ManyToOne
-    @JoinColumn(name = "cart_id")
-    private Cart cart;
+   //@ManyToOne
+   //@JoinColumn(name = "cart_id")
+   // private Cart cart;
 
-    @ManyToOne
-    @JoinColumn(name = "supplier_id", nullable = false)
-    private Supplier supplier;
+   // @ManyToOne
+    //@JoinColumn(name = "supplier_id")
+    //private Supplier supplier;
 
 
 

@@ -1,5 +1,7 @@
 package model;
 
+
+
 public enum SupplierName {
     MAXIMA(10, "first"),
     IKI(7, "third"),

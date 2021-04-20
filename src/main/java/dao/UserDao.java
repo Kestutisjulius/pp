@@ -1,4 +1,5 @@
 package dao;
+import model.Cart;
 import model.User;
 import org.hibernate.Session;
 import org.hibernate.Transaction;

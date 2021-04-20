@@ -5,7 +5,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -22,7 +21,6 @@ public class Supplier {
     @Enumerated(EnumType.ORDINAL)
     private SupplierName name;
 
-    @OneToMany
-    @JoinColumn(name = "products_id", nullable = false)
+    @OneToMany(mappedBy = "id")
     private Set<Product> products;
 }
